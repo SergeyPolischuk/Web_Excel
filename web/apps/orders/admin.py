@@ -4,8 +4,22 @@ from .models import *
 
 
 # Register your models here.
-admin.site.register(Order)
-admin.site.register(Status)
+class OrderAdmin(admin.ModelAdmin):
+    list_display = ['pk', 'customer_name', 'customer_phone', 'customer_email', 'description'[:15], 'date_created', 'date_deadline', 'status']
+
+    class Meta:
+        model = Order
+
+
+class StatusAdmin(admin.ModelAdmin):
+    list_display = ['name', 'is_active', 'date_created']
+
+    class Meta:
+        model = Status
+
+
+admin.site.register(Order, OrderAdmin)
+admin.site.register(Status, StatusAdmin)
 
 
 # class OrderAdmin(admin.ModelAdmin):

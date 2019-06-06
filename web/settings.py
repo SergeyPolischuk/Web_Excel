@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'web.apps.landing',
-    'web.apps.orders'
+    'web.apps.orders',
+    'web.apps.landing'
 ]
 
 MIDDLEWARE = [

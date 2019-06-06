@@ -20,5 +20,6 @@ admin.autodiscover()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('orders/', include('web.apps.orders.urls')),
     path('landing/', include('web.apps.landing.urls'))
 ]
